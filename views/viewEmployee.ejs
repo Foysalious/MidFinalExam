@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>view employee</title>
+</head>
+<body>
+    <h1>view employee</h1>
+    <a href="/adminHome">admin home</a><br>
+    <a href="/logout">logout</a><br>
+    <table border="1">
+		<tr>
+			<td>id</td>
+			<td>employee_name</td>
+			<td>username</td>
+            <td>contact_no</td>
+            <td>password</td>
+            <td>type</td>
+			<td>ACTION</td>
+		</tr>
+	<% for(var i=0; i < userlist.length; i++){ %>
+		<tr>
+			<td><%= userlist[i].id %></td>
+			<td><%= userlist[i].employee_name %></td>
+			<td><%= userlist[i].username %></td>
+            <td><%= userlist[i].contact_no %></td>
+            <td><%= userlist[i].password %></td>
+            <td><%= userlist[i].type %></td>
+			<td>
+				<a href="/viewEmployee/update/<%= userlist[i].username %>">EDIT</a>
+				<a href="/viewEmployee/delete/<%= userlist[i].username %>">DELETE</a>
+			</td>
+		</tr>
+	<%  } %>
+	</table>
+</body>
+</html>

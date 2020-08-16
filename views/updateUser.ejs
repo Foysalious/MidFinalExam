@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>update user page</title>
+</head>
+<body>
+    <h1>update page</h1>
+    <a href="/adminHome">admin home</a><br>
+    <a href="/logout">logout</a><br>
+    <br><br>
+
+    <form method="post">
+        <table>
+            <tr>
+                <td>id: </td>
+                <td><input type="text" disabled name="id" value="<%= user.id%>"></td>
+            </tr>
+            <tr>
+                <td>employee_name: </td>
+                <td><input type="text" name="employee_name" value="<%= user.employee_name%>"></td>
+            </tr>
+            <tr>
+                <td>username: </td>
+                <td><input type="text" disabled name="username" value="<%= user.username%>"></td>
+            </tr>
+            <tr>
+                <td>contact_no: </td>
+                <td><input type="text" name="contact_no" value="<%= user.contact_no%>"></td>
+            </tr>
+            <tr>
+                <td>password: </td>
+                <td><input type="text" name="password" value="<%= user.password%>"></td>
+            </tr>
+            <tr>
+                <td>type: </td>
+                <td><input type="text" disabled name="type" value="<%= user.type%>"></td>
+            </tr>
+            <tr>
+				<td></td>
+				<td>
+					<input type="submit" name="" value="Update">
+				</td>
+			</tr>
+        </table>
+    </form>
+</body>
+</html>
